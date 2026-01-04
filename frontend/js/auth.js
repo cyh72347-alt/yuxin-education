@@ -530,7 +530,7 @@ class LoginModal {
                     </form>
                     <div class="login-links">
                         <span>还没有账号？</span>
-                        <a href="register.html">立即注册</a>
+                        <a href="/html/register.html">立即注册</a>
                     </div>
                 </div>
             </div>
