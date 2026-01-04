@@ -1,0 +1,79 @@
+/* ========== 落叶背景专用样式 ========== */
+
+/* 落叶容器 - 确保在最底层 */
+#leaves-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: -100 !important; /* 负值确保在背景层 */
+    overflow: hidden;
+}
+
+/* 落叶动画 */
+@keyframes leafFall {
+    0% {
+        transform: translateY(-100px) rotate(0deg);
+        opacity: 0;
+    }
+    10% {
+        opacity: 0.7;
+    }
+    90% {
+        opacity: 0.7;
+    }
+    100% {
+        transform: translateY(calc(100vh + 100px)) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+.falling-leaf {
+    position: absolute;
+    top: -50px;
+    opacity: 0;
+    border-radius: 50% 0 50% 0; /* 叶子基本形状 */
+    animation: leafFall linear infinite;
+}
+
+/*回到顶部按钮*/
+
+.back-to-top {
+    /* 定位 */
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 1000;
+    
+    /* 样式 */
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #FD8291; /* 你的主题色 */
+    color: white;
+    border: none;
+    cursor: pointer;
+    
+    /* 动画效果 */
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+    
+    /* 居中图标 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(253, 130, 145, 0.3);
+}
+
+.back-to-top.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.back-to-top:hover {
+    background: #ff6b81;
+    transform: scale(1.1);
+}

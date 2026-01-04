@@ -1,0 +1,148 @@
+.container-team {
+    display: flex;
+    max-width: 1280px;
+    margin: 0 auto;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: 250px;
+    background: linear-gradient(135deg, #FD8291, #f2a2aa);
+    color: white;
+    padding: 30px 0;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    overflow-y: auto;
+}
+
+.sidebar h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar li {
+    padding: 18px 25px;
+    margin-bottom: 10px;
+    border-left: 5px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.sidebar li:hover {
+    background-color: #cc5462;
+    border-left: 3px solid white;
+}
+
+.sidebar a {
+    color: white;
+    text-decoration: none;
+    padding-left: 20px;
+    display: block;
+    font-size: 20px;
+}
+
+.content {
+    flex: 1;
+    padding: 40px;
+    overflow-y: auto;
+}
+
+.content h1 {
+    color: black;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #FD8291;
+    font-family: "楷体", "KaiTi", serif;
+}
+
+.section {
+    margin-bottom: 30px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 30px;
+    border: 4px solid #f2a2aa;
+}
+
+
+.section p {
+    text-indent: 2em;
+    font-family: "楷体", "KaiTi", serif;
+    font-size: 20px;
+}
+
+.section-img {
+    flex-shrink: 0;
+    width: 250px;
+    margin-right: 50px;
+}
+
+.section-img img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    
+}
+
+.section-content {
+    flex: 1;
+}
+
+.section-content h3 {
+    color: #e04f60;
+    margin-bottom: 12px;
+    text-align: center;
+    font-family: "楷体", "KaiTi", serif;
+}
+@media (max-width: 768px) {
+    .container-team {
+        flex-direction: column;
+    }
+    
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+    
+    .sidebar ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        padding: 0 20px;
+    }
+    
+    .sidebar li {
+        padding: 12px 15px;
+        border-left: none;
+        border-bottom: 3px solid transparent;
+    }
+    
+    .sidebar li:hover {
+        border-bottom: 3px solid white;
+    }
+    
+    .section {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .section-img {
+        width: 200px;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+}

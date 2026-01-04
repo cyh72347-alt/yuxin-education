@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人主页 - 余馨教育</title>
+    <!-- Bootstrap CSS -->
+    <link href="/bootstrap-5.3.8-dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/YuXin05.css">
+    <link rel="stylesheet" href="/css/team.css">
+    <link rel="stylesheet" href="/css/login-modal.css">
+    <link rel="stylesheet" href="/css/tool.css">
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+    <!-- Bootstrap导航栏 -->
+    <nav class="navbar navbar-expand-lg navbar-dark"
+        style="background-color: #FD8291; border-bottom: 30px solid #ece9e9;">
+        <div class="container-fluid">
+            <!-- Logo -->
+            <a class="navbar-brand" href="/index.html">
+                <img src="/images/YuXinjiaoyu.png" alt="余馨教育" class="logo-img" style="height: 60px;">
+            </a>
+
+            <!-- 移动端汉堡菜单按钮 -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="切换导航">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- 导航内容 -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/index.html">首页</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="introduction.html">教育介绍</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">课程设置</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">师资团队</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">招生问答</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">教学活动</a>
+                    </li>
+                </ul>
+                <div class="d-flex">
+                    <button id="btn-login" class="btn btn-light me-2 btn-login">登录</button>
+                    <a href="register.html" class="btn btn-register">注册</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="flex-grow-1 container mt-1 my-5 mb-0 position-relative">
+        <div class="container-team">
+            <div class="sidebar">
+                <h2>教师分类</h2>
+                <ul>
+                    <li><a href="#boss">首席教师</a></li>
+                    <li><a href="#chinese">语文老师</a></li>
+                    <li><a href="#mathematics">数学老师</a></li>
+                    <li><a href="#english">英语老师</a></li>
+                    <li><a href="#physics">物理老师</a></li>
+                    <li><a href="#chemistry">化学老师</a></li>
+                    <li><a href="#biology">生物老师</a></li>
+                    <li><a href="#histroy">历史老师</a></li>
+                    <li><a href="#politics">政治老师</a></li>
+                </ul>
+            </div>
+            <div class="content">
+                <h1 style="text-indent: 1em;">教师个人信息</h1>
+                <div id="boss" class="section">
+                    <div class="section-img">
+                        <img src="/images/Yuxin.jpg" alt="">
+                    </div>
+                    <div class="section-content">
+                        <h3>创始人&首席教师</h3>
+                        <p>陈悦豪,余馨教育平台网站的创始人,对于多门学科略有研究，曾获得美国《时代周刊》2006年度风云人物、《感动中国》2008年度人物
+                            、联合国2019年度“地球卫士奖”联合获奖人以及国际奥联会2022年“奥林匹克奖杯”获奖者。</p>
+                    </div>
+                </div>
+                <div id="chinese" class="section">
+                    <div class="section-img">
+                        <img src="/images/HanYu.jpeg" alt="">
+                    </div>
+                    <div class="section-content">
+                        <h3>语文教师</h3>
+                        <p>韩愈，字退之，世称“韩昌黎”“昌黎先生”，“唐宋八大家”之首，其鄙六朝骈体文风，推崇古体散文，其文质朴无华，气势雄健，“文起八代之衰”“集八代之成”
+                            ，开古文运动之滥觞。代表作：《师说》。</p>
+                    </div>
+                </div>
+                <div id="mathematics" class="section">
+                    <div class="section-img">
+                        <img src="/images/Gauß.jpeg" alt="">
+                    </div>
+                    <div class="section-content">
+                        <h3>数学教师</h3>
+                        <p>约翰·卡尔·弗里德里希·高斯，数学界1亿战斗力的数学王子，出生于不伦瑞克，毕业于卡罗琳学院，后进入哥廷根大学深造，曾任哥廷根大学教授兼天文台台长。主要成就包括正十七边形尺规作图法、最小二乘法、地球磁场图绘制及代数基本定理证明
+                        </p>
+                    </div>
+                </div>
+                <div id="english" class="section">
+                    <div class="section-img">
+                        <img src="/images/Sir William Jones.jpeg" alt="">
+                    </div>
+                    <div class="section-content">
+                        <h3>英语教师</h3>
+                        <p>威廉·琼斯，英国语言学家、东方学家、法学家，牛津大学大学学院毕业。进入牛津大学后编写波斯语语法著作并翻译波斯语、阿拉伯语文献，展现出卓越的外语学习天赋。创立亚洲学会，并在该会演讲中提出梵语与希腊语、拉丁语、哥特语等语言同源，这一假说成为印欧语系研究的起点，被公认为历史比较语言学奠基人。
+                            通晓28种语言，翻译《沙恭达罗》《罗摩衍那》及《诗经》《论语》部分内容，成为英国系统研究中国典籍的第一位汉学家。设计的罗马字母转写系统（琼斯系统）长期应用于语言转写领域。</p>
+                    </div>
+                </div>
+                <div id="physics" class="section">
+                    <div class="section-img">
+                        <img src="/images/Albert Einstein.jpeg" alt="">
+                    </div>
+                    <div class="section-content">
+                        <h3>物理教师</h3>
+                        <p>阿尔伯特·爱因斯坦，美国和瑞士双国籍的犹太裔物理学家，毕业于瑞士苏黎世联邦理工学院，入瑞士国籍。获得苏黎世大学物理学博士学位，并提出光子假设、成功解释了光电效应（因此获得诺贝尔物理学奖）；同年创立狭义相对论，后来创立广义相对论。
+                        </p>
+                    </div>
+                </div>
+                <div id="chemistry" class="section">
+                    <div class="section-img">
+                        <img src="/images/Дмитрий Иванович Менделеев.jpeg" alt="">
+                    </div>
+                    <div class="section-content">
+                        <h3>化学教师</h3>
+                        <p>德米特里·伊万诺维奇·门捷列夫，毕业于圣彼得堡国立大学，发现化学元素周期律，通过自制卡片记录元素性质并按原子量排列，制作出世界上第一张元素周期表，预言镓、钪、锗等未发现元素并获实验证实。
+                        </p>
+                    </div>
+                </div>
+                <div id="biology" class="section">
+                    <div class="section-img">
+                        <img src="/images/Charles Robert Darwin.jpeg" alt="">
+                    </div>
+                    <div class="section-content">
+                        <h3>生物教师</h3>
+                        <p>查尔斯·罗伯特·达尔文，曾在苏格兰爱丁堡大学攻读医学，后来进入英国剑桥大学攻读神学，发表过诸多巨著如《贝格尔号航行期内的动物志》、《物种起源》等等，并提出了生物进化论学说，从而摧毁了各种唯心的神造论以及物种不变论。
+                        </p>
+                    </div>
+                </div>
+                <div id="histroy" class="section">
+                    <div class="section-img">
+                        <img src="/images/Si Maqian.jpeg" alt="">
+                    </div>
+                    <div class="section-content">
+                        <h3>历史教师</h3>
+                        <p>司马迁，著名的史学家、文学家、思想家。少年时随父司马谈读书，并从董仲舒受学《春秋》，向孔安国问疑《尚书》。二十岁出游，历经长江、湘江、沅江、淮水、泗水、黄河等流域，沿途考察名胜古迹，访问历史遗事，调查社会风俗。著有《史记》《悲士不遇赋》等。
+                        </p>
+                    </div>
+                </div>
+                <div id="politics" class="section">
+                    <div class="section-img">
+                        <img src="/images/Franklin Delano Roosevelt.jpeg" alt="">
+                    </div>
+                    <div class="section-content">
+                        <h3>政治教师</h3>
+                        <p>富兰克林·德拉诺·罗斯福，与保尔·柯察金、全斗焕有着异曲同工之处，是资本家最严厉的父亲之一。八面威风杀气飘，个人所得全上交。一百转我九十五，我的手段你清楚。剩下五块别乱花，晚上转我四块八。还有两毛你记住，五分给娃谋出路。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <button class="back-to-top" id="backToTop">
+        <svg width="24" height="24" viewBox="0 0 24 24">
+            <path fill="white" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z" />
+        </svg>
+    </button>
+    
+    <!-- 页脚 -->
+    <footer class="footer mt-5">
+        <div class="container text-center py-4">
+            <p class="mb-1">Copyright © 2022-2026 CHAOLIUFUSHIcom, All rights reserved.</p>
+            <p class="mb-0">2022-2026，版权所有 余馨 2333备66666666</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="/bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
+    <!-- 引入认证和用户管理脚本 -->
+     <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
+     <script src="/js/supabase-config.js"></script>
+    <script src="/js/auth.js"></script>
+    <script src="/js/tool.js"></script>
+</body>
+
+</html>

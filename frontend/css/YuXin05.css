@@ -1,0 +1,526 @@
+@charset "utf-8";
+
+/* 基础样式 */
+body {
+    background-color: #ededed;
+    font-family: "楷体", "KaiTi", serif;
+    font-size: 16px;
+    color: black;
+    line-height: 1.6;
+}
+
+/* 自定义导航栏样式 */
+.navbar-brand .logo-img {
+    height: 60px;
+    transition: all 0.3s ease;
+}
+
+.navbar-nav .nav-link {
+    font-size: 18px;
+    color: white !important;
+    padding: 10px 15px;
+    margin: 0 5px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+
+/* 登录注册按钮样式 */
+.btn-login {
+    background-color: white;
+    color: #FD8291 !important;
+    border: 2px solid white;
+    padding: 8px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.btn-login:hover {
+    background-color: #f0f0f0;
+    border-color: #FD8291;
+    transform: translateY(-2px);
+}
+
+.btn-register {
+    background-color: #ff6b81;
+    color: white !important;
+    border: 2px solid white;
+    padding: 8px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.btn-register:hover {
+    background-color: #ff4757;
+    transform: translateY(-2px);
+}
+
+/* 课程卡片样式 */
+.course-card {
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.course-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.course-img-container {
+    height: 200px;
+    overflow: hidden;
+}
+
+.course-img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.course-card:hover .course-img-container img {
+    transform: scale(1.1);
+}
+
+.hot-course-card .hot-course-img-container {
+    height: 250px;
+}
+
+/* 自定义按钮样式 */
+.btn-outline-custom {
+    border: 2px solid #FD8291;
+    color: #FD8291;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-custom:hover {
+    background-color: #FD8291;
+    color: white;
+    border-color: #FD8291;
+}
+
+/* 章节标题 */
+.section-title {
+    width: fit-content;
+    padding: 10px 40px;
+    background: #FD8291;
+    color: white;
+    font-size: 20px;
+    font-weight: normal;
+    text-align: center;
+    margin: 40px auto;
+    border-radius: 25px;
+    position: relative;
+}
+
+.section-title::before {
+    content: '';
+    position: absolute;
+    left: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    background: #FD8291;
+    border-radius: 50%;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    right: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    background: #FD8291;
+    border-radius: 50%;
+}
+
+/* 页脚样式 */
+.footer {
+    background: #FD8291;
+    color: white;
+    padding: 20px 0;
+    margin-top: 40px;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .navbar-nav .nav-link {
+        padding: 8px 10px;
+        font-size: 16px;
+        text-align: center;
+    }
+    
+    .btn-login,
+    .btn-register {
+        padding: 6px 15px;
+        font-size: 14px;
+        margin: 5px 0;
+    }
+    
+    .course-img-container {
+        height: 150px;
+    }
+    
+    .hot-course-card .hot-course-img-container {
+        height: 180px;
+    }
+    
+    .section-title {
+        padding: 8px 20px;
+        font-size: 18px;
+        margin: 30px auto;
+    }
+    
+    .section-title::before,
+    .section-title::after {
+        width: 15px;
+        height: 15px;
+    }
+}
+
+@media (max-width: 576px) {
+    .navbar-brand .logo-img {
+        height: 50px;
+    }
+    
+    .course-img-container {
+        height: 120px;
+    }
+    
+    .hot-course-card .hot-course-img-container {
+        height: 150px;
+    }
+    
+    .section-title {
+        padding: 6px 15px;
+        font-size: 16px;
+        margin: 20px auto;
+    }
+    
+    .section-title::before,
+    .section-title::after {
+        width: 10px;
+        height: 10px;
+    }
+}
+
+/* 用户信息容器 */
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    height: 100%;
+}
+
+/* 欢迎文本 */
+.welcome {
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 5px 10px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+}
+
+/* 个人主页按钮 */
+.user-profile-btn {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 16px;
+    color: white;
+    text-decoration: none;
+    padding: 8px 15px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.user-profile-btn:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+    color: white;
+}
+
+.user-icon {
+    font-style: normal;
+    font-size: 18px;
+}
+
+/* 退出按钮 */
+.btn-logout {
+    font-size: 16px;
+    padding: 8px 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-logout:hover {
+    background-color: rgba(255, 107, 129, 0.8);
+    border-color: white;
+    transform: translateY(-2px);
+}
+
+/* ===== 修改内容宽度为980px ===== */
+
+/* 主要内容区域 */
+.container-fluid.mt-4 {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* 课程容器 */
+.container.mt-4 {
+    max-width: 980px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* 热门课程容器 */
+.container.mt-5 {
+    max-width: 980px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* 页脚容器 */
+footer .container.text-center.py-4 {
+    max-width: 980px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* 确保内部内容适应容器 */
+.container.mt-4 .row,
+.container.mt-5 .row {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+/* 响应式调整 */
+@media (max-width: 1100px) {
+    .container-fluid.mt-4,
+    .container.mt-4,
+    .container.mt-5,
+    footer .container.text-center.py-4 {
+        max-width: 95%;
+    }
+}
+
+@media (max-width: 768px) {
+    .container-fluid.mt-4,
+    .container.mt-4,
+    .container.mt-5,
+    footer .container.text-center.py-4 {
+        max-width: 100%;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+/* ===== 轮播图圆形指示器样式 ===== */
+
+
+
+/* 轮播容器 */
+.custom-carousel {
+    width: 100%;
+    height: 400px;
+    position: relative;
+    margin: 0 auto 40px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* 轮播内容区域 */
+.carousel-inner {
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+/* 每个轮播项 */
+.carousel-item {
+    height: 100%;
+}
+
+/* 图片容器 */
+.slide-img-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 图片样式 */
+.slide-img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* 控制按钮容器 */
+.custom-carousel .carousel-control-prev,
+.custom-carousel .carousel-control-next {
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 1;
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    z-index: 10;
+}
+
+/* 上一张按钮 */
+.custom-prev-btn {
+    left: 10px !important;
+    right: auto !important;
+}
+
+/* 下一张按钮 */
+.custom-next-btn {
+    right: 10px !important;
+    left: auto !important;
+}
+
+/* 按钮图标样式 */
+.custom-prev-icon,
+.custom-next-icon {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background: rgba(240, 214, 226, 0.7);
+    border-radius: 50%;
+    font-size: 20px;
+    color: #666;
+    transition: all 0.3s ease;
+}
+
+/* 按钮悬停效果 */
+.custom-prev-btn:hover .custom-prev-icon,
+.custom-next-btn:hover .custom-next-icon {
+    background: rgba(253, 130, 145, 0.9);
+    color: white;
+    transform: scale(1.1);
+}
+
+/* 隐藏Bootstrap默认图标 */
+.custom-carousel .carousel-control-prev-icon,
+.custom-carousel .carousel-control-next-icon {
+    display: none;
+}
+
+/* 圆形指示器容器 */
+.custom-dots {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 10px;
+    z-index: 10;
+}
+
+/* 单个圆点 */
+.custom-dot {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: #FD8291;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+    text-indent: 0;
+    opacity: 1;
+    transition: all 0.3s ease;
+}
+
+/* 激活状态的圆点 */
+.custom-dot.active {
+    background: #FD8291;
+    transform: scale(1.2);
+}
+
+/* 圆点悬停效果 */
+.custom-dot:hover {
+    background: #FD8291;
+    transform: scale(1.1);
+}
+
+/* 响应式调整 */
+@media (max-width: 1024px) {
+    .custom-carousel {
+        width: 85%;
+    }
+}
+
+@media (max-width: 768px) {
+    .custom-carousel {
+        width: 90%;
+        height: 350px;
+    }
+    
+    .custom-prev-icon,
+    .custom-next-icon {
+        width: 35px;
+        height: 35px;
+        line-height: 35px;
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 576px) {
+    .custom-carousel {
+        width: 95%;
+        height: 300px;
+    }
+    
+    .custom-prev-icon,
+    .custom-next-icon {
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        font-size: 16px;
+    }
+    
+    .custom-dots {
+        bottom: 15px;
+    }
+    
+    .custom-dot {
+        width: 10px;
+        height: 10px;
+    }
+}

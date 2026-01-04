@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人主页 - 余馨教育</title>
+    <!-- Bootstrap CSS -->
+    <link href="/bootstrap-5.3.8-dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/YuXin05.css">
+    <link rel="stylesheet" href="/css/introduction.css">
+    <link rel="stylesheet" href="/css/login-modal.css">
+    <link rel="stylesheet" href="/css/tool.css">
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+    <!-- Bootstrap导航栏 -->
+    <nav class="navbar navbar-expand-lg navbar-dark"
+        style="background-color: #FD8291; border-bottom: 30px solid #ece9e9;">
+        <div class="container-fluid">
+            <!-- Logo -->
+            <a class="navbar-brand" href="/index.html">
+                <img src="/images/YuXinjiaoyu.png" alt="余馨教育" class="logo-img" style="height: 60px;">
+            </a>
+
+            <!-- 移动端汉堡菜单按钮 -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="切换导航">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- 导航内容 -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/index.html">首页</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">教育介绍</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">课程设置</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="team.html">师资团队</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">招生问答</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">教学活动</a>
+                    </li>
+                </ul>
+
+                <div class="d-flex">
+                    <button id="btn-login" class="btn btn-light me-2 btn-login">登录</button>
+                    <a href="/html/register.html" class="btn btn-register">注册</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="flex-grow-1 container mt-1 my-5 position-relative">
+        <div class="row">
+            <div class="col-12">
+                <div class="content-overlay p-4 rounded">
+                    <h2 class="text-center mb-4">余馨教育介绍</h2>
+                    <hr style="color: #FD8291; border-width: 2px;">
+                    <p id="PPP">
+                        余馨教育创立的目的是通过本学期的学习的课程如《web应用开发》、《工程创新（三）》、《JavaScript开发技术》等课程知识，根据自身的实际情况，掌握的知识以及书本、学习通、deepseekAI工具的使用，并结合课程实际完成需要来开发的一个前后端分离的模拟线上教育平台的网站。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="footer mt-auto py-4 bg-pink text-white">
+        <div class="container text-center">
+            <p class="mb-1">Copyright © 2022-2026 CHAOLIUFUSHIcom, All rights reserved.</p>
+            <p class="mb-0">2022-2026，版权所有 余馨 2333备66666666</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS 
+     <script src="/bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
+    <script src="/js/supabase-config.js"></script>
+    <script src="/js/auth.js"></script>
+    
+    -->
+    
+    <!-- 引入认证和用户管理脚本 -->
+    <script src="/js/tool.js"></script>
+    
+</body>
+
+</html>

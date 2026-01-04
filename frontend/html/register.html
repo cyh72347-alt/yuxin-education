@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>注册 - 余馨教育</title>
+    <!-- Bootstrap CSS -->
+    <link href="/bootstrap-5.3.8-dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/register.css">
+    <link rel="stylesheet" href="/css/tool.css">
+</head>
+
+<body>
+    <!-- Bootstrap导航栏 -->
+    <nav class="navbar navbar-expand-lg navbar-dark"
+        style="background-color: #FD8291; border-bottom: 30px solid #ece9e9;">
+        <div class="container-fluid">
+            <!-- Logo -->
+            <a class="navbar-brand" href="/index.html">
+                <img src="/images/YuXinjiaoyu.png" alt="余馨教育" class="logo-img" style="height: 60px;">
+            </a>
+
+            <!-- 移动端汉堡菜单按钮 -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="切换导航">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- 导航内容 -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/index.html">首页</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="introduction.html">教育介绍</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">课程设置</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="team.html">师资团队</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">招生问答</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">教学活动</a>
+                    </li>
+                </ul>
+
+                <!-- 登录按钮 -->
+                <div class="d-flex">
+                    <button id="btn-login" class="btn btn-light me-2"
+                        onclick="if(window.loginModal){loginModal.show();}else{window.location.href='/index.html';}">
+                        登录
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 注册表单 -->
+    <div class="container mt-5 mb-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-10 col-md-10">
+                <div class="card shadow-lg border-0">
+                    <div class="card-header bg-pink text-white text-center py-4">
+                        <h3 class="mb-0">用户注册</h3>
+                    </div>
+
+                    <div class="card-body p-4 p-md-5">
+                        <form name="Login" id="registerForm" onsubmit="return handleSubmit(event)">
+                            <!-- 账号信息 -->
+                            <div class="form-section mb-5">
+                                <h4 class="form-section-title mb-4">您的账号信息</h4>
+                                <div class="border-bottom mb-4"></div>
+
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label for="username-input" class="form-label">用户名</label>
+                                        <input type="text" class="form-control" id="username-input" name="username"
+                                            pattern="^[a-zA-Z][a-zA-Z0-9_]{3,15}$" placeholder="字母开头，4-16位字母数字下划线"
+                                            required>
+                                        <div class="form-text">用户名将用于登录</div>
+                                    </div>
+
+                                    <div class="col-md-6 mb-3">
+                                        <label for="password-input" class="form-label">登录密码</label>
+                                        <input type="password" class="form-control" id="password-input" name="password"
+                                            pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d@$!%*#?&]{8,12}$"
+                                            placeholder="8-12位，必须包含字母和数字" required>
+                                        <div class="form-text">密码需包含字母和数字</div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label for="number-input" class="form-label">注册手机</label>
+                                        <input type="tel" class="form-control" id="number-input" name="number"
+                                            pattern="1[3-9]\d{9}" placeholder="11位手机号">
+                                    </div>
+
+                                    <div class="col-md-6 mb-3">
+                                        <label for="email-input" class="form-label">注册邮箱</label>
+                                        <input type="email" class="form-control" id="email-input" name="email"
+                                            placeholder="example@domain.com">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 个人信息 -->
+                            <div class="form-section mb-5">
+                                <h4 class="form-section-title mb-4">您的个人信息</h4>
+                                <div class="border-bottom mb-4"></div>
+
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label class="form-label d-block">性别</label>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="sex" id="sex-male"
+                                                value="man">
+                                            <label class="form-check-label" for="sex-male">男</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="sex" id="sex-female"
+                                                value="woman">
+                                            <label class="form-check-label" for="sex-female">女</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6 mb-3">
+                                        <label for="education-input" class="form-label">学历</label>
+                                        <select class="form-select" name="education" id="education-input">
+                                            <option value="1">职中/高中</option>
+                                            <option value="2">大专</option>
+                                            <option value="3">本科</option>
+                                            <option value="4">研究生</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label for="city-input" class="form-label">城市</label>
+                                        <select class="form-select" name="city" id="city-input">
+                                            <option value="Beijing">北京</option>
+                                            <option value="shanghai">上海</option>
+                                            <option value="Guangzhou">广州</option>
+                                            <option value="Shenzhen">深圳</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="col-md-6 mb-3">
+                                        <label class="form-label">出生日期</label>
+                                        <div class="row g-2">
+                                            <div class="col-4">
+                                                <select class="form-select" id="birth-year" name="year">
+                                                    <option value="">-- 年 --</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-4">
+                                                <select class="form-select" id="birth-month" name="month">
+                                                    <option value="">-- 月 --</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-4">
+                                                <select class="form-select" id="birth-day" name="day">
+                                                    <option value="">-- 日 --</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row mb-4">
+                                    <div class="col-12">
+                                        <label class="form-label">兴趣爱好</label>
+                                        <div class="row">
+                                            <div class="col-sm-6 col-md-3 mb-2">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" name="hobbies"
+                                                        id="hobby1" value="cs">
+                                                    <label class="form-check-label" for="hobby1">Counter-Strike2</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-6 col-md-3 mb-2">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" name="hobbies"
+                                                        id="hobby2" value="lol">
+                                                    <label class="form-check-label" for="hobby2">League of
+                                                        Legend</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-6 col-md-3 mb-2">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" name="hobbies"
+                                                        id="hobby3" value="Naruto">
+                                                    <label class="form-check-label" for="hobby3">火影忍者</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-6 col-md-3 mb-2">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" name="hobbies"
+                                                        id="hobby4" value="Sanjiaozhou">
+                                                    <label class="form-check-label" for="hobby4">三角洲行动</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="mb-4">
+                                    <label for="sign-input" class="form-label">个性签名</label>
+                                    <textarea class="form-control" name="sign" id="sign-input" rows="3"></textarea>
+                                </div>
+                            </div>
+
+                            <!-- 提交按钮 -->
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-pink btn-lg px-5">
+                                    立即注册
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <button class="back-to-top" id="backToTop">
+        <svg width="24" height="24" viewBox="0 0 24 24">
+            <path fill="white" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z" />
+        </svg>
+    </button>
+
+    <!-- Bootstrap JS -->
+    <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
+    <script src="/js/register.js"></script>
+    <script src="/bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/tool.js"></script>
+</body>
+
+</html>

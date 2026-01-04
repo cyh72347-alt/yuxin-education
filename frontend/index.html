@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link href="/bootstrap-5.3.8-dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- 自定义CSS -->
+    <link rel="stylesheet" href="/css/YuXin05.css">
+    <link rel="stylesheet" href="/css/login-modal.css">
+    <link rel="stylesheet" href="/css/tool.css">
+    <title>余馨教育</title>
+   
+</head>
+
+<body>
+    <!-- Bootstrap导航栏 -->
+    <nav class="navbar navbar-expand-lg navbar-dark"
+        style="background-color: #FD8291; border-bottom: 30px solid #ece9e9;">
+        <div class="container-fluid">
+            <!-- Logo -->
+            <a class="navbar-brand" href="#">
+                <img src="/images/YuXinjiaoyu.png" alt="余馨教育" class="logo-img" style="height: 60px;">
+            </a>
+
+            <!-- 移动端汉堡菜单按钮 -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="切换导航">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- 导航内容 -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">首页</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/html/introduction.html">教育介绍</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">课程设置</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/html/team.html">师资团队</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">招生问答</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">教学活动</a>
+                    </li>
+                </ul>
+
+                <!-- 登录注册按钮 -->
+                <div class="d-flex">
+                    <button id="btn-login" class="btn btn-light me-2 btn-login" onclick="window.loginModal?.show()">登录</button>
+                    <a href="/html/register.html" class="btn btn-register">注册</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 主要内容区域 -->
+    <div class="container-fluid mt-4">
+
+
+        <!-- Bootstrap轮播图组件 -->
+        <div id="mainCarousel" class="carousel slide custom-carousel" data-bs-ride="carousel">
+
+            <!-- 轮播内容区域（对应你的 .slides） -->
+            <div class="carousel-inner">
+
+                <!-- 第一张轮播项（对应你的 .slide） -->
+                <div class="carousel-item active">
+                    <div class="slide-img-container">
+                        <img src="/images/YuXinEducation.png" class="d-block" alt="余馨教育首页">
+                    </div>
+                </div>
+
+                <!-- 第二张轮播项 -->
+                <div class="carousel-item">
+                    <div class="slide-img-container">
+                        <img src="/images/classroom.jpg" class="d-block" alt="">
+                    </div>
+                </div>
+
+                <!-- 第三张轮播项 -->
+                <div class="carousel-item">
+                    <div class="slide-img-container">
+                        <img src="/images/5cm.jpg" class="d-block" alt="">
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- 上一张/下一张控制按钮 -->
+            <button class="carousel-control-prev custom-prev-btn" type="button" data-bs-target="#mainCarousel"
+                data-bs-slide="prev">
+                <span class="custom-prev-icon">❮</span>
+                <span class="visually-hidden">上一张</span>
+            </button>
+            <button class="carousel-control-next custom-next-btn" type="button" data-bs-target="#mainCarousel"
+                data-bs-slide="next">
+                <span class="custom-next-icon">❯</span>
+                <span class="visually-hidden">下一张</span>
+            </button>
+
+            <!-- 圆形指示器 -->
+            <div class="carousel-indicators custom-dots">
+                <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="0" class="custom-dot active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="1" class="custom-dot"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="2" class="custom-dot"
+                    aria-label="Slide 3"></button>
+            </div>
+        </div>
+
+        <!-- 课程网格 -->
+
+        <div class="container mt-4">
+            <h2 class="section-title">推荐课程</h2>
+            <div class="row row-cols-1 row-cols-md-2 g-4">
+                <div class="col">
+                    <div class="card course-card h-100">
+                        <div class="course-img-container">
+                            <img src="/images/CXGC.jpg" class="card-img-top" alt="工程创新实践训练（三）">
+                        </div>
+                        <div class="card-body text-center">
+                            <a target="_blank"
+                                href="https://mooc2-ans.chaoxing.com/mooc2-ans/mycourse/stu?courseid=255449864&clazzid=128013214&cpi=279976322&enc=35419f23eb92c808abebaa66765aad5f&t=1764925281543&pageHeader=21&v=2&hideHead=0"
+                                class="btn btn-outline-custom w-100">
+                                工程创新实践训练（三） →
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card course-card h-100">
+                        <div class="course-img-container">
+                            <img src="/images/Web.png" class="card-img-top" alt="Web应用开发">
+                        </div>
+                        <div class="card-body text-center">
+                            <a target="_blank"
+                                href="https://mooc2-ans.chaoxing.com/mooc2-ans/mycourse/stu?courseid=254816963&clazzid=126346929&cpi=279976322&enc=22f51db5b6d8cf60b083baa21dca18d9&t=1764924665048&pageHeader=21&v=2&hideHead=0"
+                                class="btn btn-outline-custom w-100">
+                                Web应用开发 →
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card course-card h-100">
+                        <div class="course-img-container">
+                            <img src="/images/Unity.png" class="card-img-top" alt="Unity游戏开发">
+                        </div>
+                        <div class="card-body text-center">
+                            <a target="_blank"
+                                href="https://mooc2-ans.chaoxing.com/mooc2-ans/mycourse/stu?courseid=250446686&clazzid=116171323&cpi=279976322&enc=7e4745463df2f27122f76b98d719c508&t=1764925090899&pageHeader=21&v=2&hideHead=0"
+                                class="btn btn-outline-custom w-100">
+                                Unity游戏开发 →
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card course-card h-100">
+                        <div class="course-img-container">
+                            <img src="/images/Digital Image.png" class="card-img-top" alt="数字图像处理">
+                        </div>
+                        <div class="card-body text-center">
+                            <a target="_blank"
+                                href="https://mooc2-ans.chaoxing.com/mooc2-ans/mycourse/stu?courseid=255021473&clazzid=126884990&cpi=279976322&enc=cf3012b131ce9b72386fd4bf0dceac18&t=1764924968258&pageHeader=21&v=2&hideHead=0"
+                                class="btn btn-outline-custom w-100">
+                                数字图像处理 →
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 热门课程标题 -->
+        <div class="container mt-5">
+            <h2 class="section-title">其他热门课程</h2>
+
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4">
+                <div class="col">
+                    <div class="card hot-course-card h-100">
+                        <div class="hot-course-img-container">
+                            <img src="/images/CS2.bmp" class="card-img-top" alt="Counter-Strike2">
+                        </div>
+                        <div class="card-body text-center">
+                            <a target="_blank" href="https://www.csgo.com.cn/#module-banner"
+                                class="btn btn-outline-custom w-100">
+                                Counter-Strike2 →
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card hot-course-card h-100">
+                        <div class="hot-course-img-container">
+                            <img src="/images/LOL.png" class="card-img-top" alt="League of Legend">
+                        </div>
+                        <div class="card-body text-center">
+                            <a target="_blank" href="https://lol.qq.com/main.shtml"
+                                class="btn btn-outline-custom w-100">
+                                League of Legend →
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card hot-course-card h-100">
+                        <div class="hot-course-img-container">
+                            <img src="/images/Naruto.jpeg" class="card-img-top" alt="火影忍者手游">
+                        </div>
+                        <div class="card-body text-center">
+                            <a target="_blank" href="https://hyrz.qq.com/web202003/index.html"
+                                class="btn btn-outline-custom w-100">
+                                火影忍者手游 →
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card hot-course-card h-100">
+                        <div class="hot-course-img-container">
+                            <img src="/images/三角洲行动.png" class="card-img-top" alt="三角洲行动">
+                        </div>
+                        <div class="card-body text-center">
+                            <a target="_blank" href="https://df.qq.com/index.shtml"
+                                class="btn btn-outline-custom w-100">
+                                三角洲行动 →
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <button class="back-to-top" id="backToTop">
+        <svg width="24" height="24" viewBox="0 0 24 24">
+            <path fill="white" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z" />
+        </svg>
+    </button>
+
+    <!-- 页脚 -->
+    <footer class="footer mt-4">
+        <div class="container text-center py-4">
+            <p class="mb-1">Copyright © 2022-2026 CHAOLIUFUSHIcom, All rights reserved.</p>
+            <p class="mb-0">2022-2026，版权所有 余馨 2333备66666666</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="/bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
+    <script src="/js/auth.js"></script>
+    <script src="/js/tool.js"></script>
+</body>
+
+</html>

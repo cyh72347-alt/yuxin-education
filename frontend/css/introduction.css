@@ -1,0 +1,35 @@
+#PPP{
+    text-indent: 2em;
+    font-size: 23px;
+}
+main.container {
+    background-image: url('../images/introduction.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 500px;
+    padding: 2rem;
+    border-radius: 15px;
+    overflow: visible;  
+}
+
+.content-overlay {
+    max-width: 1000px;
+    margin: 0 auto;
+    
+    
+}
+
+/* 如果需要全宽背景 */
+.main-background {
+    background-image: url('../images/introduction.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* 可选的视差效果 */
+    padding: 4rem 0;
+}
+#musicPlayerBtn {
+    visibility: visible !important;
+    opacity: 1 !important;
+    display: flex !important;
+}
